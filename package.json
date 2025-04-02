@@ -1,16 +1,13 @@
 {
   "name": "portafolio",
   "private": true,
-  "homepage": "https://isaackmd.github.io/Portfolio/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "predeploy": "yarn build",
-    "deploy": "gh-pages -d dist"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@heroui/react": "^2.7.5",

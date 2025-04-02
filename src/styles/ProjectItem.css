@@ -1,0 +1,104 @@
+.project-container {
+    margin: 15px auto;
+    width: 90%;
+    /* max-width: 500px; */
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+}
+
+.project-image-container {
+    position: relative;
+}
+
+.project-image {
+    width: 100%;
+    transition: transform 0.5s ease;
+    cursor: pointer;
+}
+
+/* Efecto hover en pantallas grandes */
+@media (min-width: 768px) {
+    .project-container:hover .project-image {
+        transform: scale(1.09);
+    }
+}
+
+/* Contenido del proyecto */
+.content {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: justify;
+    transition: all 0.5s ease;
+    padding: 20px;
+}
+
+/* Mostrar contenido en hover (solo en pantallas grandes) */
+@media (min-width: 768px) {
+    .project-container:hover .content {
+        top: 0;
+        z-index: 10000;
+    }
+}
+
+/* Títulos y descripciones */
+.content h3 {
+    text-align: center;
+    font-size: 22px;
+    border-bottom: 1px solid #808080;
+    padding: 15px 10px;
+}
+
+.content p {
+    padding: 15px 15px;
+    border-bottom: 1px solid #808080;
+    font-size: 14px;
+}
+
+/* Iconos */
+.icons {
+    background-color: transparent;
+    color: #fff;
+    font-size: 22px;
+    padding: 10px;
+    position: absolute;
+    bottom: -100%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 0.5s ease;
+    z-index: 10000;
+}
+
+/* Alineación en móviles */
+@media (max-width: 767px) {
+    .icons {
+        bottom: 0;
+        padding: 15px 0;
+        font-size: 20px;
+    }
+}
+
+/* Animación de iconos */
+.icons i {
+    margin: 0 8px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    z-index: 1000;
+}
+
+.icons i:hover {
+    color: #00acee;
+}
+
+/* Hover en pantallas grandes */
+@media (min-width: 768px) {
+    .project-container:hover .icons {
+        bottom: 0;
+    }
+}

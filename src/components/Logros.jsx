@@ -99,7 +99,7 @@ export const Logros = () => {
                     numScroll={2}
                     circular
                     responsiveOptions={responsiveOptions}
-                    itemTemplate={(project) => <ProjectItem project={project} icons='pi pi-link' urlImg='../../public/imgs/archievements/' text='Habilidades:'/>}
+                    itemTemplate={(project) => <ProjectItem project={project} icons='pi pi-link' urlImg='../../imgs/archievements/' text='Habilidades:'/>}
                     showIndicators={true}
                 />
             </div>

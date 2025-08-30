@@ -19,13 +19,22 @@ export const ProductService = {
                 tech:['Framework Symfony (PHP)', 'Doctrine ORM (PHP)', 'PostgreSQL', 'JavaScript', 'AJAX', 'JSON' ,'Bootstrap'],
             },
             {
-                id: '1003',
+                id: '1002',
                 code: 'dfjeEE220',
                 name: 'Sistema de Gestión para La Compra y Venta de Alimentos Locales',
                 description: 'Desarrolle un sistema web completo para la gestión de compra y venta de alimentos locales, implementando CRUD (Create, Read, Update, Delete), validaciones con expresiones regulares, gestión de usuarios con control de acceso y una interfaz responsiva adaptable a cualquier dispositivo móvil.',
                 image: 'DeliveryLions.png',
                 tech: ['Framework Symfony (PHP)', 'Doctrine ORM (PHP)', 'PostgreSQL', 'JavaScript', 'AJAX', 'JSON','Bootstrap'],
                 rep: 'https://github.com/IsaackMD/deliveryLions'
+            },
+            {
+                id: '1003',
+                code: 'dfjeEE220',
+                name: 'Big Smoke Videogames',
+                description: 'El proyecto se inspira de tiendas de videojuego en linea como Steam, este proyecto escolar tiene como prioridad proporcionar una plataforma intuitiva y segura que simplifique la adquisición y distribución de videojuegos, permitiendo a los usuarios adquirir videojuegos con facilidad.',
+                image: 'BgSmokeVideojuegosNF.png',
+                tech: ['.Net Framework (C#)', 'MySQL', 'HTML', 'CSS', 'AJAX', 'XML','Bootstrap','DataTables', 'Javascript', 'SweetAlert'],
+                rep: 'https://github.com/IsaackMD/Big_Smoke_Videojuegos_NF'
             },
             
         ];

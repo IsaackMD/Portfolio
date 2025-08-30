@@ -7,6 +7,9 @@
     border-radius: 8px;
     box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
 }
+.text-foreground {
+    color : white !important;
+}
 
 .project-image-container {
     position: relative;

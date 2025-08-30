@@ -6,14 +6,16 @@ import { Tag } from 'primereact/tag';
 import 'primereact/resources/themes/saga-blue/theme.css'; // Tema de PrimeReact
 import 'primereact/resources/primereact.min.css'; // Estilos de PrimeReact
 import 'primeicons/primeicons.css'; // Iconos de PrimeIcons
+import useIsMobile from '../hooks/useMediaQuery';
 
 // Ruta base para las imágenes
 
 
-const ProjectItem = ({ project, icons = 'pi pi-github', urlImg='../../public/imgs/projects/', text='Tecnologías:' }) => {
-    return (
-        <div className="project-container p-4">
-            <div className="relative w-full h-[300px] md:h-[400px] lg:h-[450px] overflow-hidden rounded-lg shadow-xl">
+const ProjectItem = ({ project, icons = 'pi pi-github', urlImg='/../../imgs/projects/', text='Tecnologías:' }) => {
+
+    const isMobile = useIsMobile();
+    const content= (
+        <div className="relative w-full h-[300px] md:h-[400px] lg:h-[450px] overflow-hidden rounded-lg shadow-xl">
                 <Image
                     isBlurred
                     shadow="lg"
@@ -38,11 +40,23 @@ const ProjectItem = ({ project, icons = 'pi pi-github', urlImg='../../public/img
                     </p>
                 </div>
                 <div className="icons">
-                    {project.rep &&
+                    {!isMobile &&
                         <a href={project.rep} target="_blank"><i className={icons}> </i></a>
                     }
                 </div>
             </div>
+    )
+    return (
+        <div className="project-container p-4">
+            {isMobile ? (
+                <a href={project.rep} target="_blank">
+                    {content}
+                </a>     
+            )
+        : (
+            content
+        )
+        }
         </div>
     );
 };
